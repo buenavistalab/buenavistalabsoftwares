@@ -2,4 +2,6 @@
   from = "/about.html"
   to = "/about"
   status = 301
-  force = true
+  force = false
+  query = {path = ":path"}
+  conditions = {Language = ["en"], Country = ["US"], Role = ["admin"]}
