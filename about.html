@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles-about.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,600;0,900;1,900&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,600;0,900;1,900&display=swap"
     rel="stylesheet">
   <title>Buena Vista Lab</title>
@@ -23,91 +24,94 @@
 </head>
 
 <body>
+
   <header class="about-header">
     <a href="https://buenavistalab.com">
       <div class="about-header-wrapper container">
         <div class="wrapper-logo">
-          <img src="assets/icon-header.png" alt="image from logo">
+          <div id="myContainer"></div>
           <p>
             Buena Vista Lab
           </p>
         </div>
-        <div class="burger">
-          beta
-        </div>
       </div>
     </a>
   </header>
+
   <section class="about-hero">
     <p class="container">
-      App, site, web commerce, database, system, devops, games, bot, blog, software, IoT.
+      Making cool softwares for everyone.
     </p>
   </section>
-  <section class="about-herox container">
-    <h1>
-      Nice to meet you.
-    </h1>
-    <p>
-      We are a few friends around the world making cyber ideas: from art to taylor stores.  
-      We specialize in helping businesses integrate design and technology to better serve customers, 
-      extend online reach, and increase revenue.
-    </p>
-  </section>
-  <section class="about-heroxxx">
-    <h1>
-      dashboard
-    </h1>
+
+  <section class="about-bvl">
     <p class="container">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-      of Lorem Ipsum.
+      We are a few friends around the world making cyber ideas: app, site, web commerce, database, game, bot,
+      blog, IoT and everything else about code. 
     </p>
   </section>
-  <section class="about-herox container">
-    <h1>
-      api green
-    </h1>
-    <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-      of Lorem Ipsum.
+
+  <section class="products">
+    <p class="title container">We have products.</p>
+    <p class="text container">
+      Conheca os nossos produtos digitais que lancamos no mercado.
     </p>
+    <div class="carousel container"></div>
   </section>
-  <section class="about-heroxxx">
-    <h1>
-      carousel clientes
-    </h1>
-    <p class="container">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-      of Lorem Ipsum.
+
+  <section class="clients">
+    <p class="title container">Last works.</p>
+    <p class="text container">
+      Confira os ultimos trabalhos que entregamos para os nossos clientes.
     </p>
+    <div class="carousel container"></div>
   </section>
-  <section class="about-herox container">
-    <h1>
-      about
-    </h1>
-    <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-      of Lorem Ipsum.
-    </p>
+
+  <section class="form-wrapper container">
+    <form name="contact" method="POST" data-netlify="true" netlify>
+      <p>
+        <label>Your Name: <input type="text" name="name" /></label>   
+      </p>
+      <p>
+        <label>Your Email: <input type="email" name="email" /></label>
+      </p>
+      <p>
+        <label>Your Role: <select name="role[]" multiple>
+          <option value="leader">Leader</option>
+          <option value="follower">Follower</option>
+        </select></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
   </section>
-  <footer>
-    <h1>footer</h1>
+
+  <footer class="container">
+    <div class="footer-wrapper">
+      <div class="infos">
+        <p>R. Santo Irineu</p>
+        <p>Bosque da Saúde</p>
+        <p>São Paulo</p>
+      </div>
+      <div class="infos">
+        <p>hi@bvl.com</p>
+        <p>+55 48 99180-4650</p>
+      </div>
+      <div class="infos">
+        <p>Have a nice day :)</p>
+      </div>
+    </div>
   </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
+  <script type="text/javascript" src="p5.js"></script>
+
 </body>
 
 </html>
