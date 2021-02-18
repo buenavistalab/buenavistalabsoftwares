@@ -11,6 +11,7 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,600;0,900;1,900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <title>Buena Vista Lab</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E8KYEHPB7X"></script>
@@ -47,7 +48,7 @@
   <section class="about-bvl">
     <p class="container">
       We are a few friends around the world making cyber ideas: app, site, web commerce, database, game, bot,
-      blog, IoT and everything else about code. 
+      blog, IoT and everything else about code.
     </p>
   </section>
 
@@ -64,22 +65,43 @@
     <p class="text container">
       Confira os ultimos trabalhos que entregamos para os nossos clientes.
     </p>
-    <div class="carousel container"></div>
+    <div class="carousel container">
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
   </section>
 
   <section class="form-wrapper container">
-    <form name="contact" method="POST" data-netlify="true" netlify>
+    <form name="contact" method="POST" data-netlify="true" netlify action="/about.html">
       <p>
-        <label>Your Name: <input type="text" name="name" /></label>   
+        <label>Your Name: <input type="text" name="name" /></label>
       </p>
       <p>
         <label>Your Email: <input type="email" name="email" /></label>
       </p>
       <p>
         <label>Your Role: <select name="role[]" multiple>
-          <option value="leader">Leader</option>
-          <option value="follower">Follower</option>
-        </select></label>
+            <option value="leader">Leader</option>
+            <option value="follower">Follower</option>
+          </select></label>
       </p>
       <p>
         <label>Message: <textarea name="message"></textarea></label>
@@ -110,6 +132,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="p5.js"></script>
 
 </body>

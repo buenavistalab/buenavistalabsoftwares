@@ -177,6 +177,11 @@ footer {
   border: 1px solid black;
 }
 
+.swiper-container {
+  width: 600px;
+  height: 300px;
+}
+
 @media (max-width: 768px) {
   .footer-wrapper {
     flex-flow: column;
