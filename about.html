@@ -89,26 +89,22 @@
     </div>
   </section>
 
-  <section class="form-wrapper container">
-    <form name="contact" method="POST" data-netlify="true" netlify action="/about.html">
-      <p>
+  <section class="form-wrapper">
+    <p class="title container">Drop us an email.</p>
+    <p class="text container">
+      Faca um orcamento online. Conte sua idea.
+    </p>
+    <form name="contact" method="POST" data-netlify="true" netlify action="/about.html" class="container">
         <label>Your Name: <input type="text" name="name" /></label>
-      </p>
-      <p>
         <label>Your Email: <input type="email" name="email" /></label>
-      </p>
-      <p>
-        <label>Your Role: <select name="role[]" multiple>
+        <label>Your Role: 
+          <select name="role[]">
             <option value="leader">Leader</option>
             <option value="follower">Follower</option>
-          </select></label>
-      </p>
-      <p>
+          </select>
+        </label>
         <label>Message: <textarea name="message"></textarea></label>
-      </p>
-      <p>
         <button type="submit">Send</button>
-      </p>
     </form>
   </section>
 
@@ -118,6 +114,11 @@
         <p>R. Santo Irineu</p>
         <p>Bosque da Saúde</p>
         <p>São Paulo</p>
+      </div>
+      <div class="infos">
+        <p>Burnsude Ave.</p>
+        <p>Cranford</p>
+        <p>New Jersey</p>
       </div>
       <div class="infos">
         <p>hi@bvl.com</p>
@@ -134,6 +135,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="p5.js"></script>
+  <script type="text/javascript" src="swiper.js"></script>
 
 </body>
 
