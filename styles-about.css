@@ -145,7 +145,7 @@ footer {
   flex-flow: column;
   width: 100%;
   font-size: 16px;
-  padding: 150px 0;
+  padding: 50px 0;
 }
 
 .title {
@@ -166,12 +166,21 @@ footer {
 .carousel {
   width: 100%;
   height: 500px;
-  border: 1px solid black;
 }
 
-.swiper-container {
-  width: 600px;
-  height: 300px;
+.swiper-container,
+.swiper-clients {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-clients .swiper-slide {
+  height: 100%;
+}
+
+.swiper-clients .swiper-slide img {
+  width: 100%;
+  height: auto;
 }
 
 form {
