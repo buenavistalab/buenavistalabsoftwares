@@ -12,16 +12,6 @@ body {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-::-webkit-scrollbar {
-  width: 0.4rem;
-}
-::-webkit-scrollbar-thumb {
-  background-color: orange;
-}
-::selection {
-  background-color: magenta;
-  color: chartreuse;
-}
 canvas {
 	position: absolute;
 	display: block;
