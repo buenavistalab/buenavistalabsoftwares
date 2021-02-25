@@ -3,7 +3,7 @@ const swiper = new Swiper('.swiper-products', {
   loop: true,
   slidesPerView: 1,
   loop: true,
-  mousewheel: true,
+  mousewheel: false,
   hashNavigation: {
     watchState: true,
   },
