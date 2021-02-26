@@ -269,4 +269,8 @@ form button[type=submit]:hover {
   .about-hero .text-about {
     bottom: -80px;
   }
+  .swiper-products .swiper-slide img {
+    width: 100%;
+    height: 300px;
+  }
 }
