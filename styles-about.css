@@ -31,7 +31,6 @@ body {
 a {
   text-decoration: none;
 }
-
 .about-header {
   top: 0;
   z-index: 9;
@@ -39,7 +38,6 @@ a {
   width: 100%;
   height: auto;
 }
-
 .about-header-wrapper {
   background: transparent;
   display: flex;
@@ -49,18 +47,15 @@ a {
   width: 100%;
   height: auto;
 }
-
 .wrapper-logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-flow: row;
 }
-
 .wrapper-logo img { 
   width: 30px;
 }
-
 .wrapper-logo p {
   font-size: 16px;
   font-family: 'Rubik', sans-serif;
@@ -71,27 +66,23 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 footer {
   font-size: 14px;
   font-family: 'Rubik', sans-serif;
   font-weight: 600;
 }
-
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 100px 0 20px;
 }
-
 #myContainer {
   border-radius: 47px;
   width: 50px;
   height: 50px;
   overflow: hidden;
 }
-
 .about-hero {
   height: 100vh;
   background-color: #D9AFD9;
@@ -103,13 +94,11 @@ footer {
   position: relative;
   z-index: -99;
 }
-
-.about-hero p {
+.about-hero .title-about {
   font-family: 'Source Serif Pro', serif;
   font-weight: bolder;
-  color: black;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   flex-flow: row;
   width: 100%;
@@ -121,21 +110,31 @@ footer {
   left: 0;
   right: 0;
   line-height: 35px;
+  padding: 20px 20px;
+  top: -60px;
+  max-width: 980px;
+  margin: 0 auto;
 }
-
-.about-bvl {
+.about-hero .text-about {
   font-family: 'Source Serif Pro', serif;
-  font-weight: bolder;
-  color: black;
+  font-weight: normal;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   flex-flow: row;
   width: 100%;
+  height: 100%;
   font-size: 20px;
-  padding: 200px 0 100px;
+  color: white;
+  position: fixed;
+  z-index: -9;
+  left: 0;
+  right: 0;
+  line-height: 20px;
+  padding: 20px 20px;
+  max-width: 980px;
+  margin: 0 auto;
 }
-
 .products,
 .clients {
   font-family: 'Source Serif Pro', serif;
@@ -148,11 +147,18 @@ footer {
   font-size: 16px;
   padding: 100px 0;
 }
-
+.products a {
+  color: #000;
+}
+.products a:hover {
+  background: -webkit-linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+}
 .form-wrapper {
   padding: 100px 0 50px;
 }
-
 .title {
   font-family: 'Rubik', sans-serif;
   width: 100%;
@@ -160,45 +166,49 @@ footer {
   line-height: 40px;
   font-weight: bolder;
 }
-
 .text {
   font-family: 'Source Serif Pro', serif;
   font-weight: bolder;
   width: 100%;
   font-size: 20px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px 20px;
 }
-
 .carousel {
   width: 100%;
   height: auto;
 }
-
 .swiper-container,
 .swiper-clients {
   width: 100%;
   height: 100%;
 }
-
 .swiper-products .swiper-slide {
   height: 100%;
 }
-
 .swiper-products .swiper-slide img {
   width: 100%;
   height: 500px;
   object-fit: cover;
 }
-
 .swiper-clients .swiper-slide {
   height: 100%;
 }
-
 .swiper-clients .swiper-slide img {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
-
+.swiper-button-next, 
+.swiper-button-prev {
+  background: -webkit-linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.swiper-pagination-bullet-active {
+  background: #000 !important;
+}
 form {
   display: flex;
   justify-content: center;
@@ -206,7 +216,6 @@ form {
   flex-flow: column;
   padding: 50px;
 }
-
 form input, form textarea, form select {
   width: 100%;
   padding: 12px;
@@ -214,13 +223,11 @@ form input, form textarea, form select {
   border-radius: 4px;
   resize: vertical;
 }
-
 form label {
   padding: 20px 0;
   display: inline-block;
   width: 100%;
 }
-
 form button[type=submit] {
   background-color: #D9AFD9;
   background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
@@ -235,7 +242,6 @@ form button[type=submit] {
   cursor: pointer;
   float: right;
 }
-
 form button[type=submit]:hover {
   background-color: #b38cb3;
   background-image: linear-gradient(0deg, #b38cb3 0%, #7ab7be 100%);
@@ -244,20 +250,23 @@ form button[type=submit]:hover {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 @media (max-width: 768px) {
   .footer-wrapper {
     flex-flow: column;
     justify-content: space-between;
     width: 100%;
   }
-
   .infos {
     width: 100%;
     padding-bottom: 30px;
   }
-  
   .infos:last-child {
     padding-bottom: 0;
+  }
+  .about-hero .title-about {
+    top: -70px;
+  }
+  .about-hero .text-about {
+    bottom: -80px;
   }
 }
