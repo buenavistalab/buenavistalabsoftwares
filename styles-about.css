@@ -74,7 +74,7 @@ footer {
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   padding: 100px 0 20px;
 }
 #myContainer {
@@ -175,6 +175,10 @@ footer {
   margin: 0 auto;
   padding: 0 20px 20px;
 }
+.text-slide-products {
+  text-align: center;
+  padding-top: 20px;
+}
 .carousel {
   width: 100%;
   height: auto;
@@ -222,11 +226,13 @@ form input, form textarea, form select {
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
+  font-family: 'Rubik', sans-serif;
 }
 form label {
   padding: 20px 0;
   display: inline-block;
   width: 100%;
+  font-family: 'Rubik', sans-serif;
 }
 form button[type=submit] {
   background-color: #D9AFD9;
