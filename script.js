@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
 
   document.addEventListener("touchmove", function (event) {
-    if (isMouseDown) {
+    if (isMouseDown && navigator.userAgent.match(/Android/i)) {
       addShape(event.pageX, event.pageY);
     }
     event.preventDefault();
@@ -100,15 +100,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
     return;
   })
-
-  function onStart ( touchEvent ) {
-    if( navigator.userAgent.match(/Android/i) ) {   
-    touchEvent.preventDefault();     
-    }
-    return;
-  }
-
-  onStart();
 
   window.addEventListener("resize", function () {
     camera.aspect = window.innerWidth / window.innerHeight;
