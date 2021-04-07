@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   camera.position.z = -5000;
   camera.lookAt(scene.position);
 
-  var light = new THREE.DirectionalLight(0xffffff, 0.6);
+  var light = new THREE.DirectionalLight(0xffffff, 0.2);
   light.position.x = -1;
   light.position.y = -1;
   light.position.z = -1;
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     mesh.position.x = window.innerWidth / 2 - x;
     mesh.position.y = window.innerHeight / 2 - y;
-    mesh.position.z = camera.position.z + 900;
+    mesh.position.z = camera.position.z + 200;
 
     mesh.rotateX(Math.random() * Math.PI * 2);
     mesh.rotateY(Math.random() * Math.PI);
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     requestAnimationFrame(animate);
 
     shapes.forEach((shape) => {
-      shape.rotateX(0.09);
+      shape.rotateX(0.01);
     });
   };
 
@@ -100,6 +100,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
     return;
   })
+
+  function onStart ( touchEvent ) {
+    if( navigator.userAgent.match(/Android/i) ) {   
+    touchEvent.preventDefault();     
+    }
+    return;
+  }
+
+  onStart();
 
   window.addEventListener("resize", function () {
     camera.aspect = window.innerWidth / window.innerHeight;
