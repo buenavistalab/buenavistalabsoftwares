@@ -31,6 +31,7 @@ h1 {
   background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: right;
 }
 a {
   text-decoration: none;
@@ -51,7 +52,7 @@ a:hover {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 .work {
   color: black;
@@ -65,20 +66,6 @@ a:hover {
   margin: 0 auto;
   max-width: 980px;
   padding: 20px 20px;
-}
-.mobile {
-  color: white;
-  display: none;
-  margin: 0 auto;
-  position: fixed;
-  z-index: 9;
-  text-align: center;
-  top: 20px;
-  left: 0;
-  right: 0;
-  font-family: 'Source Serif Pro', serif;
-  font-weight: bolder;
-  font-style: italic;
 }
 
 @media (max-width: 576px) {
@@ -99,5 +86,9 @@ a:hover {
   }
   a {
     font-size: 0.7rem;
+  }
+  h1 {
+    font-size: 3rem;
+    line-height: 2.3rem;
   }
 }

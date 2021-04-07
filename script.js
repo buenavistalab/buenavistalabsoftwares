@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
 
   document.addEventListener("touchmove", function (event) {
-    if (isMouseDown && navigator.userAgent.match(/Android/i)) {
+    if (isMouseDown) {
       addShape(event.pageX, event.pageY);
     }
     event.preventDefault();
