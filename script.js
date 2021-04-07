@@ -86,22 +86,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     return;
   });
 
-  document.addEventListener("touchstart", function (event) {
-    if (isMouseDown) {
-      addShape(event.pageX, event.pageY);
-    }
-    event.preventDefault();
-    return;
-  });
-
-  document.addEventListener("touchend", function (event) {
-    if (isMouseDown) {
-      addShape(event.pageX, event.pageY);
-    }
-    event.preventDefault();
-    return;
-  });
-
   document.addEventListener("touchmove", function (event) {
     if (isMouseDown) {
       addShape(event.pageX, event.pageY);
