@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const addShape = function (x, y) {
     const material = new THREE.MeshLambertMaterial({
       color: 0xffffff,
-      emissive: new THREE.Color("hsl(" + hue + ", 100%, 40%)")
+      emissive: new THREE.Color("hsl(" + hue + ", 100%, 70%)")
     });
 
     hue += 1;
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     mesh.position.x = window.innerWidth / 2 - x;
     mesh.position.y = window.innerHeight / 2 - y;
-    mesh.position.z = camera.position.z + 500;
+    mesh.position.z = camera.position.z + 900;
 
     mesh.rotateX(Math.random() * Math.PI * 2);
     mesh.rotateY(Math.random() * Math.PI);
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     requestAnimationFrame(animate);
 
     shapes.forEach((shape) => {
-      shape.rotateX(0.002);
+      shape.rotateX(0.09);
     });
   };
 
@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     if (isMouseDown) {
       addShape(event.pageX, event.pageY);
     }
+    return;
   });
 
   document.addEventListener("touchmove", function (event) {
@@ -90,12 +91,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
       addShape(event.pageX, event.pageY);
     }
     event.preventDefault();
+    return;
   });
 
   document.addEventListener("click", () => {
     if (isMouseDown) {
       geometry = geometries[Math.floor(Math.random() * geometries.length)];
     }
+    return;
   })
 
   window.addEventListener("resize", function () {
