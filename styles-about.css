@@ -41,7 +41,7 @@ a {
 .about-header-wrapper {
   background: transparent;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-flow: row;
   width: 100%;
@@ -70,12 +70,13 @@ footer {
   font-size: 14px;
   font-family: 'Rubik', sans-serif;
   font-weight: 600;
+  
 }
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 100px 0 20px;
+  padding: 50px 0 20px;
 }
 #myContainer {
   border-radius: 47px;
@@ -146,6 +147,7 @@ footer {
   width: 100%;
   font-size: 16px;
   padding: 100px 0;
+  background: rgb(240, 251, 255);
 }
 .products a {
   color: #000;
@@ -158,6 +160,7 @@ footer {
 }
 .form-wrapper {
   padding: 100px 0 50px;
+  background: rgb(240, 251, 255);
 }
 .title {
   font-family: 'Rubik', sans-serif;

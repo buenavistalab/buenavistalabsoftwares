@@ -53,6 +53,7 @@ a:hover {
   flex-flow: column;
   justify-content: center;
   align-items: flex-end;
+  overflow: hidden;
 }
 .work {
   color: black;
