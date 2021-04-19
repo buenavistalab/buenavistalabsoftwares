@@ -70,13 +70,21 @@ footer {
   font-size: 14px;
   font-family: 'Rubik', sans-serif;
   font-weight: 600;
-  
+}
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+}
+footer img {
+  width: 200px;
 }
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  padding: 50px 0 20px;
+  align-items: flex-start;
+  padding: 50px 0;
 }
 #myContainer {
   border-radius: 47px;
@@ -185,6 +193,7 @@ footer {
 .carousel {
   width: 100%;
   height: auto;
+  padding-top: 20px;
 }
 .swiper-container,
 .swiper-clients {
@@ -207,12 +216,12 @@ footer {
   height: 250px;
   object-fit: cover;
 }
-.swiper-button-next, 
+/* .swiper-button-next, 
 .swiper-button-prev {
   background: -webkit-linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 .swiper-pagination-bullet-active {
   background: #000 !important;
 }
@@ -226,13 +235,13 @@ form {
 form input, form textarea, form select {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 4px;
   resize: vertical;
   font-family: 'Rubik', sans-serif;
 }
 form label {
-  padding: 20px 0;
+  padding: 10px 0;
   display: inline-block;
   width: 100%;
   font-family: 'Rubik', sans-serif;
@@ -258,6 +267,13 @@ form button[type=submit]:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.copyright {
+  font-size: 10px;
+  font-family: 'Source Serif Pro', serif;
+  color: gray;
+  padding-top: 20px;
+  text-align: center;
 }
 @media (max-width: 768px) {
   .footer-wrapper {

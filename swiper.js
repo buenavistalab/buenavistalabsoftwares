@@ -1,30 +1,19 @@
 const swiper = new Swiper('.swiper-products', {
-  // Optional parameters
   loop: true,
   slidesPerView: 1,
+  spaceBetween: 20,
   loop: true,
   mousewheel: false,
   hashNavigation: {
     watchState: true,
   },
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    dynamicBullets: true,
-  },
-
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
 });
 
 const swiper2 = new Swiper('.swiper-clients', {
-  // Optional parameters
   loop: true,
   slidesPerView: 1,
   loop: true,
