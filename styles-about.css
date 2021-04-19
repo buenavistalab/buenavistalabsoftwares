@@ -216,14 +216,12 @@ footer img {
   height: 250px;
   object-fit: cover;
 }
-/* .swiper-button-next, 
+.swiper-button-next, 
 .swiper-button-prev {
   background: -webkit-linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-} */
-.swiper-pagination-bullet-active {
-  background: #000 !important;
+  color: #D9AFD9;
 }
 form {
   display: flex;
