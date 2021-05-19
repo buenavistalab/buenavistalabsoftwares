@@ -1,10 +1,15 @@
 function setup() {
-  var canvas = createCanvas(50, 50, WEBGL);
+  var canvas = createCanvas(windowWidth, windowHeight, WEBGL);
   canvas.parent('myContainer');
+  background(0);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
-  frameRate(10);
+  frameRate(5);
 
   normalMaterial();
   push();
