@@ -144,7 +144,7 @@ canvas {
   margin: 0 auto;
   text-align: center;
 }
-.about-hero .text-about {
+.we-are .text-about {
   font-family: 'Source Serif Pro', serif;
   font-weight: normal;
   display: flex;
@@ -155,15 +155,12 @@ canvas {
   height: 100%;
   font-size: 20px;
   color: white;
-  position: fixed;
-  z-index: -9;
-  left: 0;
-  right: 0;
   line-height: 20px;
   padding: 20px 20px;
   max-width: 980px;
   margin: 0 auto;
 }
+.we-are,
 .products,
 .clients {
   font-family: 'Source Serif Pro', serif;
@@ -235,7 +232,7 @@ canvas {
 }
 .swiper-clients .swiper-slide img {
   width: 100%;
-  height: 250px;
+  height: 350px;
   object-fit: cover;
 }
 .swiper-button-next, 
@@ -322,5 +319,10 @@ form button[type=submit]:hover {
   .swiper-products .swiper-slide img {
     width: 100%;
     height: 300px;
+  }
+  .swiper-clients .swiper-slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
   }
 }
