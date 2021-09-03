@@ -1,6 +1,6 @@
 function setup() {
   var canvas = createCanvas(windowWidth, windowHeight, WEBGL);
-  canvas.parent('myContainer');
+  canvas.parent('myCanvas');
   background(0);
 }
 
@@ -23,7 +23,7 @@ function draw() {
   rotateX(frameCount * Math.random());
   rotateY(frameCount * Math.random());
   rotateZ(frameCount * Math.random());
-  torus(randomNumber(90, 900), randomNumber2(90, 900));
+  torus(randomNumber(1, 900), randomNumber2(1, 100));
   pop();
 
 }

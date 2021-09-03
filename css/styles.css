@@ -1,0 +1,89 @@
+body {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+h1 {
+  font-size: 1rem;
+  font-style: italic;
+  font-family: 'Besley', serif;
+  color: #fff;
+  padding-top: 20px;
+}
+p {
+  font-size: 0.8rem;
+  font-family: 'Azeret Mono', monospace;
+  color: #fff;
+}
+.flex-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  z-index: 999;
+}
+.flex-header-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.flex-header-right {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  margin-left: 15px;
+}
+a:hover {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: bolder;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+#myCanvas {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  z-index: -999;
+  position: absolute;
+  top: 0;
+}
+.central-text p {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-flow: row;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  color: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  line-height: 35px;
+  padding: 20px 20px;
+  top: -60px;
+  max-width: 1440px;
+  margin: 0 auto;
+  z-index: -9;
+}
+@media (max-width: 720px) {
+
+}

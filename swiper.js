@@ -2,21 +2,15 @@ const swiper = new Swiper('.swiper-products', {
   loop: true,
   slidesPerView: 1,
   spaceBetween: 20,
-  loop: true,
   mousewheel: false,
   hashNavigation: {
     watchState: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+  }
 });
 
 const swiper2 = new Swiper('.swiper-clients', {
   loop: true,
   slidesPerView: 1,
-  loop: true,
   spaceBetween: 20,
   centeredSlides: true,
   autoplay: {
