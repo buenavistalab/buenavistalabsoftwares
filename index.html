@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <link rel="icon" href="assets/icon.jpg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,600;0,900;1,900&display=swap"
-    rel="stylesheet">
-  <title>Buena Vista Lab.</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Besley:ital@1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,900;1,300;1,900&display=swap" rel="stylesheet">
+  <title>buenavistalab</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E8KYEHPB7X"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -22,26 +22,39 @@
 </head>
 
 <body>
-  <section class="wrapper container">
-    <a href="/about.html">
-      <h1>Buena Vista Lab.</h1>
-      <img src="./assets/TORUS.png" alt="torus bg" id="img-bg">
-    </a>
+  <header>
+    <div class="container">
+      <div class="flex-header">
+        <div class="flex-header-left">
+            <h1>buenavistalab</h1>
+        </div>
+        <div class="flex-header-right">
+          <a href="/about.html">
+            <p>about</p>
+          </a>
+          <a href="/about#work.html">
+            <p>work</p>
+          </a>
+          <a href="/about#contact.html">
+            <p>contact</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section>
+    <div class="central-text">
+      <p>
+        Making cool and affordable
+        <br>
+        softwares for everyone.
+      </p>
+    </div>
   </section>
-  <script type="text/javascript">
-    const description = [
-    "https://raw.githubusercontent.com/buenavistalab/buena-vista-lab/master/assets/t1.png",
-    "https://raw.githubusercontent.com/buenavistalab/buena-vista-lab/master/assets/t2.png",
-    "https://raw.githubusercontent.com/buenavistalab/buena-vista-lab/master/assets/t3.png",
-    "https://raw.githubusercontent.com/buenavistalab/buena-vista-lab/master/assets/t4.png",
-    "https://raw.githubusercontent.com/buenavistalab/buena-vista-lab/master/assets/t5.png",
-    "https://raw.githubusercontent.com/buenavistalab/buena-vista-lab/master/assets/t6.png"
-  ];
-
-    const size = description.length
-    const magic = Math.floor(size*Math.random())
-    document.getElementById('img-bg').src=description[magic];
-  </script>
+  <div id="myCanvas"></div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
+  <script type="text/javascript" src="p5.js"></script>
 </body>
 
 </html>

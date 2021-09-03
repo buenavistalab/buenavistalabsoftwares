@@ -1,109 +1,58 @@
-document.addEventListener("DOMContentLoaded", function (event) {
-  var renderer = new THREE.WebGLRenderer({ antialias: true });
-  renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setClearColor(0x000000, 1);
+const canvasTag = document.querySelector('canvas');
 
-  document.body.appendChild(renderer.domElement);
+canvasTag.width = window.innerWidth * 2;
+canvasTag.height = window.innerHeight * 2;
 
-  var scene = new THREE.Scene();
+canvasTag.style.width = window.innerWidth + 'px';
+canvasTag.style.Height = window.innerHeight + 'px';
 
-  var camera = new THREE.PerspectiveCamera(
-    90,
-    window.innerWidth / window.innerHeight,
-    0.1,
-    5000
-  );
-  camera.position.z = -5000;
-  camera.lookAt(scene.position);
+const context = canvasTag.getContext('2d');
+context.scale(2, 2);
 
-  var light = new THREE.DirectionalLight(0xffffff, 0.2);
-  light.position.x = -1;
-  light.position.y = -1;
-  light.position.z = -1;
-  scene.add(light);
+let aimX = null;
+let aimY = null;
+let currentX = null;
+let currentY = null;
 
-  const geometries = [
-    new THREE.BoxBufferGeometry(30, 30, 30),
-    new THREE.ConeBufferGeometry(30, 30, 30),
-    new THREE.TorusBufferGeometry(30, 10, 16, 100),
-    new THREE.CircleBufferGeometry(30, 32),
-    new THREE.CylinderBufferGeometry(30, 30, 90, 100),
-    new THREE.DodecahedronBufferGeometry(30),
-    new THREE.IcosahedronBufferGeometry(30),
-    new THREE.OctahedronBufferGeometry(30),
-    new THREE.SphereBufferGeometry(30, 30, 30),
-    new THREE.TetrahedronBufferGeometry(30),
-    new THREE.TorusKnotBufferGeometry(30, 5, 100, 16),
-  ];
+let i = 0;
 
-  let hue = 0;
-  let shapes = [];
+const images = [
+  'https://saulofilho.github.io/photos/ThePhotosWereGreat/imgs/imgsLow/NYBikeGreenBlack.jpg',
+  'https://saulofilho.github.io/photos/ThePhotosWereGreat/imgs/imgsLow/LABikeBlueWheelsBlueWhite.jpg',
+].map(source => {
+  const image = document.createElement('img');
+  image.src = source;
+  return image;
+});
 
-  const addShape = function (x, y) {
-    const material = new THREE.MeshLambertMaterial({
-      color: 0xffffff,
-      emissive: new THREE.Color("hsl(" + hue + ", 100%, 70%)")
-    });
-
-    hue += 1;
-
-    var mesh = new THREE.Mesh(geometry, material);
-
-    mesh.position.x = window.innerWidth / 2 - x;
-    mesh.position.y = window.innerHeight / 2 - y;
-    mesh.position.z = camera.position.z + 200;
-
-    mesh.rotateX(Math.random() * Math.PI * 2);
-    mesh.rotateY(Math.random() * Math.PI);
-
-    shapes.push(mesh);
-
-    scene.add(mesh);
-  };
-
-  var animate = function () {
-    camera.position.z += 1;
-
-    renderer.render(scene, camera);
-    requestAnimationFrame(animate);
-
-    shapes.forEach((shape) => {
-      shape.rotateX(0.01);
-    });
-  };
-
-  animate();
-
-  let isMouseDown = true;
-
-  var geometry = geometries[9];
-
-  document.addEventListener("mousemove", function (event) {
-    if (isMouseDown) {
-      addShape(event.pageX, event.pageY);
+['mousemove', 'touchmove'].forEach(function(e) {
+  document.addEventListener(e, function(event) {
+    aimX = event.pageX;
+    aimY = event.pageY / 4;
+    if (currentX === null) {
+      currentX = event.pageX;
+      currentY = event.pageY;
     }
-    return;
-  });
-
-  document.addEventListener("touchmove", function (event) {
-    if (isMouseDown) {
-      addShape(event.pageX, event.pageY);
-    }
-    event.preventDefault();
-    return;
-  });
-
-  document.addEventListener("click", () => {
-    if (isMouseDown) {
-      geometry = geometries[Math.floor(Math.random() * geometries.length)];
-    }
-    return;
-  })
-
-  window.addEventListener("resize", function () {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
   });
 });
+
+canvasTag.addEventListener('click', function() {
+  i = i + 1;
+  if (i >= images.length) {
+    i = 0;
+  }
+});
+
+const draw = () => {
+  if (currentX) {
+    if (images[i].complete) {
+      context.drawImage(images[i], currentX - 1, currentY - 1);
+    }
+    currentX = currentX + (aimX - currentX) * 0.1;
+    currentY = currentY + (aimY - currentY) * 0.1;
+  }
+
+  requestAnimationFrame(draw);
+};
+
+draw();

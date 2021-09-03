@@ -5,15 +5,14 @@
   <meta charset="UTF-8">
   <link rel="icon" href="assets/icon.jpg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles-about.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,600;0,900;1,900&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,600;0,900;1,900&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles-about.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Besley:ital@1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,900;1,300;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <title>Buena Vista Lab.</title>
+  <title>buenavistalab</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E8KYEHPB7X"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -25,83 +24,42 @@
 </head>
 
 <body>
-
-  <header class="about-header">
-    <div class="about-header-wrapper container">
-      <div class="wrapper-logo">
-        <p>
-          <a href="https://buenavistalab.com">
-            Buena Vista Lab
+  <header>
+    <div class="container">
+      <div class="flex-header">
+        <div class="flex-header-left">
+          <a href="/">
+            <h1>buenavistalab</h1>
           </a>
-        </p>
+        </div>
       </div>
     </div>
   </header>
-
-  <section class="about-hero">
-    <div id="myContainer"></div>
-    <p class="title-about" data-aos="fade-up">
-      Making cool and affordable
-      <br>
-      softwares for everyone.
-    </p>
+  <section class="we-are" id="#about">
+    <div class="container">
+      <p class="text-about" data-aos="fade-up">
+        We are a few friends spread around the world making cyber ideas:
+        app, site, web commerce, database, game, bot,
+        blog, IoT and everything else about code.
+      </p>
+    </div>
   </section>
-
-  <section class="we-are">
-    <p class="text-about" data-aos="fade-up">
-      We are a few friends around the world making cyber ideas:
-      <br>
-      app, site, web commerce, database, game, bot,
-      blog, IoT and everything else about code.
-    </p>
-  </section>
-
-  <section class="products">
-    <p class="title container" data-aos="fade-up">
-      Look at these 
-      <br> 
-      nice products.
-    </p>
-    <p class="text" data-aos="fade-up">
-      We are specialized in concepting projects to any kind of client.
-      <br>
-      And, when we have got some time, we developer cyber products to automate the real world.
-    </p>
-    <div class="carousel container">
-      <div class="swiper-container swiper-products">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./assets/bdd.gif" alt="bdd gif homepage" loading="lazy">
-            <p class="text-slide-products">
-              <a href="https://botanicdailydata.com/">Botanic Daily Data</a>
-            </p>
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/scheduleme.gif" alt="scheduleme gif homepage" loading="lazy">
-            <p class="text-slide-products">
-              <a href="https://scheduleme.com/">ScheduleMe</a>
-            </p>
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/dashboard.gif" alt="dashboard gif homepage" loading="lazy">
-            <p class="text-slide-products">
-              <a href="https://easycontrolapp.com/">EasyControl App</a>
-            </p>
-          </div>
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+  <section class="art">
+    <div class="container">
+      <div class="wrapper-img" data-aos="fade-up">
+        <canvas id="canvasAbout"></canvas>
       </div>
     </div>
   </section>
-
-  <section class="clients">
-    <p class="title container" data-aos="fade-up">
-      Latest works.
-    </p>
-    <p class="text" data-aos="fade-up">
-      Did you see what we launched in the past days?
-    </p>
+  <section class="clients" id="#work">
+    <div class="container">
+      <p class="title container" data-aos="fade-up">
+        Latest works.
+      </p>
+      <p class="text" data-aos="fade-up">
+        Did you see what we launched in the past days?
+      </p>
+    </div>
     <div class="carousel">
       <div class="swiper-container swiper-clients">
         <div class="swiper-wrapper">
@@ -160,25 +118,25 @@
       </div>
     </div>
   </section>
-
-  <section class="form-wrapper">
-    <p class="title container" data-aos="fade-up">
-      Drop us a line.
-    </p>
-    <p class="text" data-aos="fade-up">
-      Your idea is oddly odd? Cool! We love it. Challenges make us smarter.
-      <br>
-      So, don't be shy. Drop us an email and see what could be happen.
-    </p>
-    <form name="contact" method="POST" data-netlify="true" netlify action="/about.html" class="container">
-      <label>Your Name: <input type="text" name="name" placeholder="Paul Banks" /></label>
-      <label>Your Email: <input type="email" name="email" placeholder="paulbanks@gmail.com" /></label>
-      <label>Message: <textarea name="message"
-          placeholder="Hi. Could you guys make an app that transforms air in money?"></textarea></label>
-      <button type="submit">Send</button>
-    </form>
+  <section class="form-wrapper" id="#contact">
+    <div class="container">
+      <p class="title" data-aos="fade-up">
+        Drop us a line.
+      </p>
+      <p class="text" data-aos="fade-up">
+        Your idea is oddly odd? Cool! We love it. Challenges make us smarter.
+        <br>
+        So, don't be shy. Drop us an email and see what could be happen.
+      </p>
+      <form name="contact" method="POST" data-netlify="true" netlify action="/about.html">
+        <label>Your Name: <input type="text" name="name" placeholder="Paul Banks" /></label>
+        <label>Your Email: <input type="email" name="email" placeholder="paulbanks@gmail.com" /></label>
+        <label>Message: <textarea name="message"
+            placeholder="Hi. Could you guys make an app that transforms air in money?"></textarea></label>
+        <button type="submit">Send</button>
+      </form>
+    </div>
   </section>
-
   <footer>
     <div class="container">
       <div class="img-wrapper">
@@ -211,11 +169,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="swiper.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
-  <script type="text/javascript" src="p5.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script type="text/javascript" src="aos.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
