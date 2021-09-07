@@ -65,6 +65,10 @@ a:hover {
   position: absolute;
   top: 0;
 }
+.central-text {
+  width: 100%;
+  height: 100%;
+}
 .central-text p {
   display: flex;
   justify-content: left;
@@ -75,15 +79,21 @@ a:hover {
   font-size: 40px;
   color: white;
   position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   line-height: 35px;
   padding: 20px 20px;
-  top: -60px;
   max-width: 1440px;
   margin: 0 auto;
   z-index: -9;
 }
-@media (max-width: 720px) {
-
+@media (max-width: 556px) {
+  .flex-header {
+    align-items: baseline;
+  }
+  .flex-header-right {
+    align-items: flex-end;
+    flex-flow: column;
+  }
 }
