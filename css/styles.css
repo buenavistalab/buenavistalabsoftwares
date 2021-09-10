@@ -96,4 +96,7 @@ a:hover {
     align-items: flex-end;
     flex-flow: column;
   }
+  .flex-header-right a {
+    padding-bottom: 10px;
+  }
 }
