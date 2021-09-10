@@ -328,4 +328,9 @@ canvas {
   .product-item {
     margin-left: unset;
   }
+  .wrapper-img {
+    height: 600px;
+    width: 100%;
+    margin-bottom: 120px;
+  }
 }
