@@ -114,33 +114,11 @@ a {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-/* .word {
-  position: relative;
-  display: inline;
+.blog a {
   font-family: 'Azeret Mono', monospace;
-  font-size: 2rem;
   color: #000;
-  padding-bottom: 50px;
+  text-decoration: underline;
 }
-.word a:hover {
-  background: -webkit-linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-style: italic;
-}
-.overlay {
-  opacity: 0;
-  position: absolute;
-  width: 50%;
-  height: 50%;
-  left: 0;
-  top: 0;
-  padding: 15px;
-  transition: opacity 0.5s ease;
-}
-span {
-  font-size: 10px;
-} */
 .title {
   font-family: 'Azeret Mono', monospace;
   width: 100%;
@@ -190,7 +168,10 @@ span {
   object-fit: cover;
 }
 .form-wrapper,
-.products {
+.products,
+.blog,
+.open-source, 
+.clients {
   padding: 150px 15px 50px;
 }
 .form-row {
@@ -259,8 +240,7 @@ footer {
   padding: 50px 15px 20px;
   text-align: center;
 }
-.art, 
-.clients {
+.art {
   padding: 0 15px;
 }
 .wrapper-img {
