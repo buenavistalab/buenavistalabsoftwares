@@ -35,22 +35,35 @@ h1 {
   padding-top: 20px;
 }
 h1:hover {
-  color:#97D9E1;
+  color:#97D9E1 !important;
 }
 header {
   padding: 0 15px;
+}
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  z-index: 999;
 }
 .flex-header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 999;
-  position: fixed;
+  padding: 0 15px;
 }
 .flex-header-left {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.flex-header-right {
+  display: flex;
+  justify-content: right;
   align-items: center;
   width: 100%;
 }
@@ -343,4 +356,59 @@ canvas {
   .store .store-img a img {
     object-fit: none;
   }
+  .flex-header {
+    align-items: baseline;
+  }
+  .flex-header-right {
+    align-items: flex-end;
+    flex-flow: column;
+  }
+  .flex-header-right button {
+    padding-bottom: 10px;
+  }
+}
+
+/* DARK MODE */
+body {
+  --text-color: #222;
+  --bkg-color: #fff;
+}
+body.dark-theme {
+  --text-color: #eee;
+  --bkg-color: #2f2f2f;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    --text-color: #eee;
+    --bkg-color: #2f2f2f;
+  }
+  body.light-theme {
+    --text-color: #222;
+    --bkg-color: #fff;
+  }
+}
+body {
+  background: var(--bkg-color);
+}
+h1,
+p, 
+a,
+form label {
+  color: var(--text-color) !important;
+}
+.blog a,
+.products a,
+.open-source a {
+  border: 1px solid var(--text-color) !important;
+}
+.btn-toggle {
+  background: transparent;
+  border: unset;
+  cursor: pointer;
+}
+.material-icons.md-light { 
+  color: rgba(255, 255, 255, 1); 
+}
+.material-icons.md-dark { 
+  color: rgba(0, 0, 0, 0.7); 
 }
