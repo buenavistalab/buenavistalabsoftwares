@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Besley:ital@1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,900;1,300;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>buenavistalab</title>
@@ -24,13 +26,20 @@
 </head>
 
 <body>
-  <header>
+  <header id="navbar">
     <div class="container">
       <div class="flex-header">
         <div class="flex-header-left">
           <a href="/">
             <h1>buenavistalab</h1>
           </a>
+        </div>
+        <div class="flex-header-right">
+          <button class="btn-toggle">
+            <span class="material-icons md-light" id="icon">
+              light_mode
+            </span>
+          </button>
         </div>
       </div>
     </div>
@@ -343,6 +352,8 @@
   <script type="text/javascript" src="/scripts/aos.js"></script>
   <script type="text/javascript" src="/scripts/three.js"></script>
   <script type="text/javascript" src="/scripts/script.js"></script>
+  <script type="text/javascript" src="/scripts/darkMode.js"></script>
+  <script type="text/javascript" src="/scripts/navHide.js"></script>
 </body>
 
 </html>
