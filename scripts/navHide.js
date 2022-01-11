@@ -8,6 +8,3 @@ let currentScrollPos = window.pageYOffset;
   }
   prevScrollpos = currentScrollPos;
 }
-
-
-console.log('xxxxxx->', prevScrollpos)
