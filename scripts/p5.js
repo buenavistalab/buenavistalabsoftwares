@@ -27,6 +27,3 @@ function draw() {
   pop();
 
 }
-
-console.log(randomNumber(90, 900))
-console.log(randomNumber2(90, 900))

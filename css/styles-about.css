@@ -289,7 +289,7 @@ footer {
   margin-bottom: 150px;
   overflow: hidden;
 }
-canvas {
+#canvas-art canvas {
 	position: absolute;
 	display: block;
   width: 100%;
@@ -298,6 +298,10 @@ canvas {
   right: 0;
   bottom: 0;
 	left: 0;
+}
+#move-glitch {
+  width: 100% !important;
+  height: 100% !important;
 }
 @media (max-width: 556px) {
   .footer-wrapper {
