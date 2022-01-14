@@ -132,7 +132,8 @@ a {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-.blog a {
+.blog a,
+.store a {
   font-family: 'Azeret Mono', monospace;
   color: #000;
   text-decoration: none;
@@ -302,6 +303,18 @@ footer {
 #move-glitch {
   width: 100% !important;
   height: 100% !important;
+  cursor: pointer !important;
+  margin-top: 50px;
+}
+.click-me {
+  display: none;
+  margin-left: 20px;
+  position: absolute;
+  color: #fff;
+  font-family: 'Azeret Mono', monospace;
+}
+#move-glitch:hover + div.click-me {
+  display: block;
 }
 @media (max-width: 556px) {
   .footer-wrapper {
@@ -370,6 +383,9 @@ footer {
   .flex-header-right button {
     padding-bottom: 10px;
   }
+  #move-glitch {
+    display: none;
+  }
 }
 
 /* DARK MODE */
@@ -402,7 +418,8 @@ form label {
 }
 .blog a,
 .products a,
-.open-source a {
+.open-source a,
+.store a {
   border: 1px solid var(--text-color) !important;
 }
 .btn-toggle {
