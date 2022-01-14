@@ -63,8 +63,11 @@ const draw = () => {
 
 draw();
 
-// canvasTag.onmousemove = function(e) {
-
-//   console.log('xxxxxxx', e)
-
-// };
+// mouse text on hover
+const currentMousePos = { x: -1, y: -1 };
+    $(document).mousemove(function(event) {
+    currentMousePos.x = event.pageX;
+    currentMousePos.y = event.pageY;
+    $('div.click-me').css('top', currentMousePos.y);
+    $('div.click-me').css('left', currentMousePos.x);
+});
