@@ -192,6 +192,7 @@ a {
 }
 .swiper-clients .swiper-slide {
   height: 100%;
+  cursor: grab !important;
 }
 .swiper-clients .swiper-slide img {
   width: 100%;
@@ -234,7 +235,7 @@ a {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   flex-flow: row;
 }
 form {
@@ -436,4 +437,8 @@ form label {
 }
 .material-icons.md-dark { 
   color: rgba(0, 0, 0, 0.7); 
+}
+.client-about {
+  font-style: italic;
+  font-size: 12px;
 }
