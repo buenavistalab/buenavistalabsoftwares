@@ -132,7 +132,8 @@ a {
   padding-bottom: 10px;
 }
 .blog a,
-.store a {
+.store a,
+.utils a {
   font-family: 'Azeret Mono', monospace;
   color: #000;
   text-decoration: none;
@@ -212,7 +213,8 @@ a {
 .blog,
 .open-source, 
 .clients,
-.store {
+.store,
+.utils {
   padding: 150px 15px 50px;
 }
 .products a,
@@ -224,7 +226,8 @@ a {
 }
 .products a:hover,
 .open-source a:hover,
-.store a:hover {
+.store a:hover,
+.utils a:hover {
   background: -webkit-linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -320,6 +323,10 @@ footer {
 #move-glitch:hover + div.click-me {
   display: block;
 }
+.ascii-art {
+  padding-top: 100px;
+  color: #D9AFD9;
+}
 @media (max-width: 556px) {
   .footer-wrapper {
     flex-flow: column;
@@ -390,6 +397,9 @@ footer {
   #move-glitch {
     display: none;
   }
+  .ascii-art {
+    font-size: 4px;
+  }
 }
 
 /* DARK MODE */
@@ -423,7 +433,8 @@ form label {
 .blog a,
 .products a,
 .open-source a,
-.store a {
+.store a,
+.utils a {
   border: 1px solid var(--text-color) !important;
 }
 .btn-toggle {
