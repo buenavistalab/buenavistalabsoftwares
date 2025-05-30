@@ -1,0 +1,21 @@
+html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+      height: 100%;
+    }
+
+    #dvd {
+      position: absolute;
+      width: 100px;
+      height: 50px;
+      color: pink;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+    }
