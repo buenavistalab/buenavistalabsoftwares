@@ -26,3 +26,7 @@ const swiper2 = new Swiper('.swiper-clients', {
     },
   }
 });
+
+const swiper3 = new Swiper('.swiper-home', {
+  loop: true
+});
