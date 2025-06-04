@@ -36,3 +36,22 @@
         resizeTimer = setTimeout(layoutMasonry, 200);
       });
     })();
+
+function shuffleChildren(containerSelector) {
+  const wrapper = document.querySelector(containerSelector);
+  if (!wrapper) return;
+
+  const slides = Array.from(wrapper.children);
+
+  for (let i = slides.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [slides[i], slides[j]] = [slides[j], slides[i]];
+  }
+
+  slides.forEach(slide => wrapper.appendChild(slide));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  shuffleChildren('.swiper-wrapper');
+  shuffleChildren('.masonry-grid');
+});

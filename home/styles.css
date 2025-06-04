@@ -380,11 +380,13 @@ form label {
 
 .swiper-home .slide-text p {
   margin: 0;
-  font-size: 1rem;
-}
-
-.swiper-slide p {
-  font-family: 'Rubik', sans-serif;
+  font-weight: bolder;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-size: clamp(2rem, 8vw, 8rem);
+  text-transform: uppercase;
+  color: #38f697 !important;
+  line-height: clamp(0.4em, 8vw, 105px);
 }
 
 .masonry-grid {
@@ -408,15 +410,6 @@ form label {
   display: block;
   width: 100%;
   height: auto;
-}
-
-.swiper-home .slide-text p {
-  margin: 0;
-  font-size: clamp(2rem, 8vw, 8rem);
-  text-transform: uppercase;
-  color: #97D9E1 !important;
-  font-weight: bolder;
-  line-height: clamp(0.4em, 10vw, 100px);
 }
 
 .form-wrapper,
