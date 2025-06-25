@@ -38,11 +38,26 @@ p {
   align-items: center;
   width: 100%;
 }
+.flex-header-left h1 {
+  font-size: 24px;
+  color: lawngreen;
+}
 .flex-header-right {
   display: flex;
   justify-content: right;
   align-items: center;
   width: 100%;
+}
+.flex-header-right {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+}
+.flex-header-right a p {
+  color: lawngreen;
+  font-size: 60px;
+  font-family: 'Besley', serif;
 }
 a {
   text-decoration: none;
