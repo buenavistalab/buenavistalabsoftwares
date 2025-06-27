@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: #000;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  mix-blend-mode: difference;
+  font-family: "Ultra", serif;
+  font-size: 10vmin;
+  transform: translate(-50%, -50%);
+  line-height: 0.8;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.ball {
+  background: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  animation: heartbeat 1s infinite;
+}
