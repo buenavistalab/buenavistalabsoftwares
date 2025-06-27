@@ -1,0 +1,42 @@
+/* jazzkeys.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e1e2f, #3e2f4f);
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+
+textarea#input {
+  width: 80%;
+  max-width: 600px;
+  height: 300px;
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  resize: none;
+  font-size: 1.2rem;
+  background-color: #2c2c3c;
+  color: #97d9e1;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  outline: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea#input:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px #97d9e1;
+}
+
+::selection {
+  background: #97d9e1;
+  color: #2c2c3c;
+}
