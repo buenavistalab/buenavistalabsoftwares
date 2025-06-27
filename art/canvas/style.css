@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: #000;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.home {
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 1;
+}
+
+nav a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  margin: 0 10px 0 0;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1;
+  cursor: pointer;
+  background: #ffffff13;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+}
+
+button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+button:hover {
+  opacity: 0.1;
+}
+
+p {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  mix-blend-mode: difference;
+  font-family: "Homemade Apple", cursive;
+  font-size: 20px;
+}
+
+code {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+canvas {
+  vertical-align: bottom;
+}
