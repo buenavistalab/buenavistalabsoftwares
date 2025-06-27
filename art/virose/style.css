@@ -1,0 +1,79 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+button {
+    background-color: black;
+    color: lightsalmon;
+    border-color: lightgreen;
+    margin-top: -1em;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    margin-left: 1em;
+}
+h1 {
+    color: greenyellow;
+    font-family: 'Creepster', cursive;
+    font-size: 100px;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 0 6px 12px;
+}
+h2, a {
+    font-size: 1em;
+    color: lightblue;
+}
+canvas {
+    border-radius: 20em;
+  }
+#myContainer {
+    margin: 5% 0 0 5%;
+}
+span {
+    padding: 1em 1em 1em 1em;
+}
+#myInputs .inputs {
+    -webkit-appearance: none;
+    width: 100%;
+    max-width: 300px;
+    height: 12px;
+    background: #1a1a1a;
+    border: 1px solid lightgreen;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.1);
+    margin: 0.5em 0;
+}
+
+/* Slider Thumb (WebKit) */
+#myInputs .inputs::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: greenyellow;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid lightgreen;
+    box-shadow: 0 0 5px greenyellow;
+}
+
+/* Slider Thumb (Firefox) */
+#myInputs .inputs::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: greenyellow;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid lightgreen;
+    box-shadow: 0 0 5px greenyellow;
+}
+
+/* Optional: on focus */
+#myInputs .inputs:focus {
+    outline: none;
+    box-shadow: 0 0 10px greenyellow;
+}
