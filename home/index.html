@@ -8,12 +8,8 @@
   <link rel="stylesheet" href="./styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Besley:ital@1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Besley:ital@1&family=Manrope:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>buenavistalab</title>
@@ -22,192 +18,123 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-E8KYEHPB7X');
   </script>
 </head>
 
 <body>
   <header id="navbar">
-    <div class="container">
-      <div class="flex-header">
-        <div class="flex-header-left">
-          <a href="/home/index.html">
-            <h1>buenavistalab</h1>
-          </a>
-        </div>
-        <div class="flex-header-right">
-          <button class="btn-toggle">
-            <span class="material-icons md-light" id="icon">
-              light_mode
-            </span>
-          </button>
-        </div>
-      </div>
+    <div class="nav-inner">
+      <a class="brand" href="/home/index.html">buenavistalab</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#our-clients">Clients</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="btn-toggle" type="button" aria-label="Toggle color theme">
+        <span class="material-icons md-dark" id="icon">light_mode</span>
+      </button>
     </div>
   </header>
 
-  <section class="main-carroussel">
-    <div class="carousel-home">
-      <div class="swiper-container swiper-home">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./assets/bg1-low.jpg" alt="bg image 1" loading="lazy">
-            <div class="slide-text">
-              <p>Custom Software Development</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/bg2-low.jpg" alt="bg image 2" loading="lazy">
-            <div class="slide-text">
-              <p>Creative Digital Product Design</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/bg3-low.jpg" alt="bg image 3" loading="lazy">
-            <div class="slide-text">
-              <p>IT & Marketing Consulting</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/bg4-low.jpg" alt="bg image 4" loading="lazy">
-            <div class="slide-text">
-              <p>Prototyping & MVPs</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/bg5-low.jpg" alt="bg image 5" loading="lazy">
-            <div class="slide-text">
-              <p>Tech Advisory for Brands and Startups</p>
-            </div>
-          </div>
-        </div>
+  <section class="hero">
+    <div class="hero-media">
+      <img src="./assets/bg1-low.jpg" alt="" loading="eager">
+    </div>
+    <div class="hero-content">
+      <p class="hero-brand">buenavistalab</p>
+      <h1 class="hero-title">Digital products, built with intention.</h1>
+      <p class="hero-text">
+        A creative tech studio for brands that want software, design, and strategy in one place.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#work">See our work</a>
+        <a class="btn btn-secondary" href="#contact">Start a project</a>
       </div>
     </div>
   </section>
 
-  <section class="we-are" id="about">
-    <div class="container">
-      <p class="text-about" data-aos="fade-up" data-aos-duration="3000">
-        Transforming ideas into digital experiences.
-        <br/>
-        <br/>
-        BuenavistaLab is a creative tech studio that blends software development, digital product ideation, and strategic consulting into powerful solutions for companies and brands.
-        <br/>
-        <br/>
-        Whether you're launching a new digital product, scaling your tech infrastructure, or looking for creative ways to engage your audience — we’ve got you covered.
+  <section class="statement" id="about">
+    <div class="container-narrow">
+      <p class="statement-text" data-aos="fade-up" data-aos-duration="900">
+        We turn ideas into digital experiences — products, platforms, and prototypes that move brands forward.
       </p>
     </div>
   </section>
 
-  <section class="clients">
+  <section class="capabilities">
     <div class="container">
-      <p class="title container" data-aos="fade-up" data-aos-duration="3000">
-        Our Work
-      </p>
-      <p class="text" data-aos="fade-up" data-aos-duration="3000">
-        We collaborate with brands that believe in innovation.
-        <br>
-        A showcase of digital products, platforms, and prototypes developed by BuenavistaLab.
-      </p>
+      <div class="capability" data-aos="fade-up" data-aos-duration="700">
+        <h2>Software</h2>
+        <p>Custom platforms, e-commerce, and full-stack product engineering.</p>
+      </div>
+      <div class="capability" data-aos="fade-up" data-aos-duration="700" data-aos-delay="80">
+        <h2>Design</h2>
+        <p>Product ideation, interfaces, and creative digital experiences.</p>
+      </div>
+      <div class="capability" data-aos="fade-up" data-aos-duration="700" data-aos-delay="160">
+        <h2>Advisory</h2>
+        <p>Tech strategy, MVPs, and consulting for brands and startups.</p>
+      </div>
     </div>
+  </section>
+
+  <section class="work" id="work">
     <div class="container">
-      <div id="grid" class="masonry-grid" data-aos="fade-up" data-aos-duration="3000">
-        <div class="masonry-item">
-            <img src="./assets/kibon.jpg" alt="kibon homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-            <img src="../assets/decoskin.png" alt="deco skin homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="./assets/saraiva-under.jpg" alt="jessyca homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="../assets/jessyca.png" alt="jessyca homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="../assets/lar-home-decor.png" alt="lar home decor homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="./assets/absolut.jpg" alt="lar home decor homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="../assets/benditocheiroart.png" alt="bendito cheiro art homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="./assets/ubertriiiiii.gif" alt="uber homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="../assets/wogofilmes.png" alt="wogofilmes homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="../assets/instaxmmrs.png" alt="instaxmmrs homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="../assets/zinetrip.png" alt="zinetrip homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="../assets/bdd.png" alt="bdd homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="./assets/barber-home.png" alt="barber homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="../assets/spotz.png" alt="spotz homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="../assets/spdwd.png" alt="speedweed homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="../assets/ffwd.png" alt="ffwd homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="../assets/fecmt.png" alt="fecmt homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="./assets/kibon-clock.png" alt="kibon homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="../assets/bblend-maquinas.png" alt="bblend-maquinas homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="../assets/bblend-cap.png" alt="bblend-cap homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="../assets/bad.png" alt="bad company homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="../assets/santa.png" alt="santa homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="./assets/ney.png" alt="ney homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="./assets/car.png" alt="car homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="../assets/manual.png" alt="manual homepage" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="./assets/bvl-low.gif" alt="bvl" loading="lazy">
-        </div>
-        <div class="masonry-item">
-          <img src="./assets/petala.png" alt="petala" loading="lazy">
-        </div>
+      <div class="section-heading" data-aos="fade-up" data-aos-duration="800">
+        <h2>Our Work</h2>
+        <p>Selected digital products, platforms, and prototypes.</p>
+      </div>
+      <div id="grid" class="work-grid" data-aos="fade-up" data-aos-duration="900">
+        <figure class="work-item work-item--lg">
+          <img src="./assets/kibon.jpg" alt="Kibon" loading="lazy">
+        </figure>
+        <figure class="work-item">
+          <img src="../assets/decoskin.png" alt="Deco Skin" loading="lazy">
+        </figure>
+        <figure class="work-item">
+          <img src="./assets/saraiva-under.jpg" alt="Saraiva" loading="lazy">
+        </figure>
+        <figure class="work-item work-item--lg">
+          <img src="./assets/absolut.jpg" alt="Absolut" loading="lazy">
+        </figure>
+        <figure class="work-item">
+          <img src="../assets/jessyca.png" alt="Jessyca" loading="lazy">
+        </figure>
+        <figure class="work-item">
+          <img src="./assets/ubertriiiiii.gif" alt="Uber" loading="lazy">
+        </figure>
+        <figure class="work-item">
+          <img src="../assets/bblend-maquinas.png" alt="Brastemp B.blend" loading="lazy">
+        </figure>
+        <figure class="work-item">
+          <img src="../assets/lar-home-decor.png" alt="Lar Home Decor" loading="lazy">
+        </figure>
+        <figure class="work-item work-item--lg">
+          <img src="./assets/kibon-clock.png" alt="Kibon Clock" loading="lazy">
+        </figure>
+        <figure class="work-item">
+          <img src="../assets/spotz.png" alt="Spotz" loading="lazy">
+        </figure>
+        <figure class="work-item">
+          <img src="../assets/wogofilmes.png" alt="Wogo Filmes" loading="lazy">
+        </figure>
+        <figure class="work-item">
+          <img src="./assets/barber-home.png" alt="Barber" loading="lazy">
+        </figure>
       </div>
     </div>
   </section>
 
   <section class="clients" id="our-clients">
     <div class="container">
-      <p class="title container" data-aos="fade-up" data-aos-duration="3000">
-        Our Clients
-      </p>
-      <p class="text" data-aos="fade-up" data-aos-duration="3000">
-        We work with organizations that lead their markets.
-        <br>
-        From public institutions to global consumer brands — partners who trust BuenavistaLab to deliver.
-      </p>
+      <div class="section-heading" data-aos="fade-up" data-aos-duration="800">
+        <h2>Our Clients</h2>
+        <p>
+          We work with organizations that lead their markets —
+          from public institutions to global consumer brands.
+        </p>
+      </div>
     </div>
     <div class="carousel carousel-logos">
       <div class="swiper-container swiper-clients-logos">
@@ -246,50 +173,44 @@
     </div>
   </section>
 
-  <section class="form-wrapper" id="contact">
-    <div class="container">
-      <div class="form-row">
-        <div class="form-texts">
-          <p class="title" data-aos="fade-up" data-aos-duration="3000">
-            Drop us a line. 
-            <br>
-            Let’s Work Together
-          </p>
-          <p class="text" data-aos="fade-up" data-aos-duration="3000">
-            Get in touch with us to ask questions or request a quote. We are ready to understand your needs and offer the best technological solution for your company.
-          </p>
-        </div>
-        <form name="contact" method="POST" data-netlify="true" netlify action="/about.html" data-aos="fade-up" data-aos-duration="3000">
-          <label>Name: <input type="text" name="name" placeholder="Your name" /></label>
-          <label>Email: <input type="email" name="email" placeholder="Your email" /></label>
-          <label>Idea: <textarea name="message"
-              placeholder="Your idea"></textarea></label>
-          <button type="submit">Send</button>
-        </form>
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-copy" data-aos="fade-up" data-aos-duration="800">
+        <h2>Let’s work together.</h2>
+        <p>
+          Tell us about your idea. We’ll help you shape the right product,
+          platform, or prototype.
+        </p>
+        <a class="contact-email" href="mailto:hi@buenavistalab.com">hi@buenavistalab.com</a>
       </div>
+      <form name="contact" method="POST" data-netlify="true" netlify action="/about.html" data-aos="fade-up" data-aos-duration="800">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="Your email" required />
+        </label>
+        <label>
+          Idea
+          <textarea name="message" placeholder="What are you building?" rows="5" required></textarea>
+        </label>
+        <button type="submit">Send message</button>
+      </form>
     </div>
   </section>
 
   <footer>
-    <div class="container">
-      <div class="footer-wrapper">
-        <div class="infos">
-          <p>São Paulo, BR</p>
-        </div>
-        <div class="infos">
-          <p>New Jersey, US</p>
-        </div>
-        <div class="infos">
-          <p>Düsseldorf, DE</p>
-        </div>
-        <div class="infos">
-          <p>Questions? Say</p>
-          <p>hi@buenavistalab.com</p>
-        </div>
+    <div class="container footer-grid">
+      <p class="footer-brand">buenavistalab</p>
+      <div class="footer-places">
+        <p>São Paulo, BR</p>
+        <p>New Jersey, US</p>
+        <p>Düsseldorf, DE</p>
       </div>
       <p class="copyright">
-        Copyright © 2025 BUENA VISTA LAB, LTDA
-        <br />
+        Copyright © 2026 BUENA VISTA LAB, LTDA<br />
         All rights reserved.
       </p>
     </div>
@@ -300,11 +221,8 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script type="text/javascript" src="/scripts/swiper.js"></script>
   <script type="text/javascript" src="/scripts/aos.js"></script>
-  <script type="text/javascript" src="/scripts/three.js"></script>
-  <script type="text/javascript" src="/scripts/script.js"></script>
   <script type="text/javascript" src="/scripts/darkMode.js"></script>
   <script type="text/javascript" src="/scripts/navHide.js"></script>
-  <script type="text/javascript" src="/scripts/moveGlitch.js"></script>
   <script type="text/javascript" src="script.js"></script>
 </body>
 

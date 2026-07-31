@@ -52,8 +52,7 @@ function shuffleChildren(containerSelector) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  shuffleChildren('.swiper-home .swiper-wrapper');
-  shuffleChildren('.masonry-grid');
+  shuffleChildren('.work-grid');
 
   window.addEventListener('load', () => {
     const clientsLogosEl = document.querySelector('.swiper-clients-logos');
