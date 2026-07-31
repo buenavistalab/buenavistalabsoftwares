@@ -52,6 +52,13 @@ function shuffleChildren(containerSelector) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  shuffleChildren('.swiper-wrapper');
+  shuffleChildren('.swiper-home .swiper-wrapper');
   shuffleChildren('.masonry-grid');
+
+  window.addEventListener('load', () => {
+    const clientsLogosEl = document.querySelector('.swiper-clients-logos');
+    if (clientsLogosEl && clientsLogosEl.swiper) {
+      clientsLogosEl.swiper.update();
+    }
+  });
 });

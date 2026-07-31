@@ -125,6 +125,12 @@ a {
   width: 100%;
   height: 100%;
 }
+
+.swiper-clients-logos {
+  width: 100%;
+  height: auto;
+  min-height: 110px;
+}
 .swiper-clients .swiper-slide {
   height: 100%;
   cursor: grab !important;
@@ -435,4 +441,76 @@ form label {
 .products,
 .clients {
   padding: 150px 15px 50px;
+}
+
+.carousel-logos {
+  padding-top: 20px;
+  min-height: 110px;
+}
+
+.swiper-clients-logos .swiper-wrapper {
+  transition-timing-function: linear !important;
+  align-items: center;
+}
+
+.swiper-clients-logos .swiper-slide {
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab !important;
+  box-sizing: border-box;
+}
+
+.carousel-logos .swiper-slide img {
+  display: block;
+  width: auto !important;
+  height: auto;
+  max-width: 240px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.carousel-logos .swiper-slide img.client-logo-pf {
+  max-height: 96px;
+  max-width: 72px;
+}
+
+.carousel-logos .swiper-slide img.logo-dark.client-logo-pf {
+  filter: invert(1);
+}
+
+.carousel-logos .swiper-slide img.logo-dark {
+  display: none;
+}
+
+body.dark-theme .carousel-logos .swiper-slide img.logo-light,
+body.light-theme .carousel-logos .swiper-slide img.logo-dark {
+  display: none;
+}
+
+body.dark-theme .carousel-logos .swiper-slide img.logo-dark,
+body.light-theme .carousel-logos .swiper-slide img.logo-light {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not(.light-theme):not(.dark-theme) .carousel-logos .swiper-slide img.logo-light {
+    display: none;
+  }
+
+  body:not(.light-theme):not(.dark-theme) .carousel-logos .swiper-slide img.logo-dark {
+    display: block;
+  }
+}
+
+@media (max-width: 556px) {
+  .swiper-clients-logos .swiper-slide {
+    height: 88px;
+  }
+
+  .carousel-logos .swiper-slide img {
+    max-width: 180px;
+    max-height: 64px;
+  }
 }

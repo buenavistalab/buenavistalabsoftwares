@@ -1,26 +1,32 @@
 const btn = document.querySelector(".btn-toggle");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-const currentTheme = localStorage.getItem("theme");
-if (currentTheme == "dark") {
-  document.body.classList.toggle("dark-theme");
-} else if (currentTheme == "light") {
-  document.body.classList.toggle("light-theme");
+function isDarkTheme() {
+  if (document.body.classList.contains("light-theme")) return false;
+  if (document.body.classList.contains("dark-theme")) return true;
+  return prefersDarkScheme.matches;
 }
 
-btn.addEventListener("click", function () {
-  if (prefersDarkScheme.matches) {
-    document.body.classList.toggle("light-theme");
-    let theme = document.body.classList.contains("light-theme")
-      ? "light"
-      : "dark";
-  } else {
-    document.body.classList.toggle("dark-theme");
-    let theme = document.body.classList.contains("dark-theme")
-      ? "dark"
-      : "light";
+function syncThemeClass() {
+  const theme = localStorage.getItem("theme");
+  document.body.classList.remove("dark-theme", "light-theme");
+
+  if (theme === "dark") {
+    document.body.classList.add("dark-theme");
+  } else if (theme === "light") {
+    document.body.classList.add("light-theme");
+  } else if (prefersDarkScheme.matches) {
+    document.body.classList.add("dark-theme");
   }
+}
+
+syncThemeClass();
+
+btn.addEventListener("click", function () {
+  const dark = !isDarkTheme();
+  const theme = dark ? "dark" : "light";
   localStorage.setItem("theme", theme);
+  syncThemeClass();
 });
 
 let div = document.getElementById("icon");
