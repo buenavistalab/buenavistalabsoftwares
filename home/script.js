@@ -52,7 +52,25 @@ function shuffleChildren(containerSelector) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  shuffleChildren('.swiper-home .swiper-wrapper');
   shuffleChildren('.work-grid');
+
+  const homeEl = document.querySelector('.swiper-home');
+  if (homeEl) {
+    new Swiper('.swiper-home', {
+      loop: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true,
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      speed: 1200,
+      allowTouchMove: true,
+    });
+  }
 
   window.addEventListener('load', () => {
     const clientsLogosEl = document.querySelector('.swiper-clients-logos');
