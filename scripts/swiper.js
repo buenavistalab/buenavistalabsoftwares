@@ -33,13 +33,6 @@ if (swiperClientsEl) {
   });
 }
 
-const swiperHomeEl = document.querySelector('.swiper-home');
-if (swiperHomeEl) {
-  new Swiper('.swiper-home', {
-    loop: true
-  });
-}
-
 const swiperClientsLogosEl = document.querySelector('.swiper-clients-logos');
 if (swiperClientsLogosEl) {
   new Swiper('.swiper-clients-logos', {
